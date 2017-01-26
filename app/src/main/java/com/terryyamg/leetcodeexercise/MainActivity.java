@@ -84,10 +84,13 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View view, int position) {
             switch (NUMBER_EASY[position]){
                 case "001":
-                    MainActivityFragment.n001Easy(fragmentManager);
+                    MainActivityFragment.n001(fragmentManager);
+                    break;
+                case "007":
+                    MainActivityFragment.n007(fragmentManager);
                     break;
                 case "202":
-                    MainActivityFragment.n202Easy(fragmentManager);
+                    MainActivityFragment.n202(fragmentManager);
                     break;
                 default:
                     Log.i("none","none");
@@ -107,13 +110,13 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View view, int position) {
             switch (NUMBER_MEDIUM[position]){
                 case "002":
-                    MainActivityFragment.n002Medium(fragmentManager);
+                    MainActivityFragment.n002(fragmentManager);
                     break;
                 case "003":
-                    MainActivityFragment.n003Medium(fragmentManager);
+                    MainActivityFragment.n003(fragmentManager);
                     break;
                 case "006":
-                    MainActivityFragment.n006Medium(fragmentManager);
+                    MainActivityFragment.n006(fragmentManager);
                     break;
                 default:
                     Log.i("none","none");
