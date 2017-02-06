@@ -79,6 +79,14 @@ public class Number001TwoSum extends Fragment {
 
         return view;
     }
+    /**
+     * 想法:
+     * 建立答案陣列 ans
+     * [n1,n2,n3,n4]
+     * 兩個迴圈計算(n1+n2),(n1+n3), ... ,(n2+n4),(n3+n4)
+     * 如果兩個相加等於目標數字
+     * 紀錄兩個數字位置並回傳
+     * */
 
     public int[] twoSum(int[] nums, int target) {
         int[] ans = new int[2];

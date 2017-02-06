@@ -64,7 +64,25 @@ public class Number003LongestSubstringWithoutRepeatingCharacters extends Fragmen
         return view;
     }
 
-    /*失敗-> Time Limit Exceeded*/
+    /**失敗-> Time Limit Exceeded 算太久
+     * 建立最大長度初始值為0
+     * 建立迴圈
+     *              j =0  1  2   3
+     *  從i=j=0開始    a  b  c   a
+     *                 ╰╯  │  │
+     *                 ╰──╯  │
+     *                 ╰────╯
+     *  從i=j=1開始    a  b  c   a
+     *                    ╰╯  │
+     *                    ╰──╯
+     *                    .
+     *                    .
+     *                    .
+     * 建立一個Map，然後把輸入的字串從第一個字開始放入
+     * 檢查Map裡面是否包含該字元 ──有──>  與最大長度比較取最大的
+     *                          └─沒有──> 將該字元放入Map，如果為最後一筆 與最大長度比較取最大的
+     * 如果最大長度等於0,回傳字串長度
+     * */
 //    public int lengthOfLongestSubstring(String s) {
 //        if (s.length() == 0)
 //            return 0;

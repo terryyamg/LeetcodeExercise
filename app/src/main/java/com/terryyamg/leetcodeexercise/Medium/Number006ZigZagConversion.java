@@ -84,20 +84,20 @@ public class Number006ZigZagConversion extends Fragment {
 
      -------2----------2*1
      PYAIHRNAPLSIIG        P A Y P A L I S H I R I N G
-     0 1 2 3 4 5 6 7 8 9
+                           0 1 2 3 4 5 6 7 8 9
      PYAIHRN
      APLSIIG
 
      -------3----------2*2
      PAHNAPLSIIGYIR        P AYP A LIS H IRI N G
-     0 123 4 567 8 901 2 3
+                           0 123 4 567 8 901 2 3
      P   A   H   N
      A P L S I I G
      Y   I   R
 
      -------4----------2*3
      PINALSIGYAHRPI       P AYPAL I SHIRI N G
-     0 12345 6 78901 2 3
+                          0 12345 6 78901 2 3
      P     I     N
      A   L S   I G
      Y A   H R
@@ -105,12 +105,19 @@ public class Number006ZigZagConversion extends Fragment {
 
      -------5----------2*4
      PHASIYIRPLIGAN       P AYPALIS H IRING
-     0 1234567 8 9012345 6
+                          0 1234567 8 9012345 6
      P     H
      A   S I
      Y  I  R
      P L   I G
      A     N
+
+     找到第一排的字元 2 * (輸入列 - 1)，字元存起來並紀錄位置
+     開始向內取得字元 如果最後沒有字元就假設有
+     P AYPALIS H IRING** *
+     →      ← →     ←
+    如果到同一個位置，紀錄一個並中斷while迴圈
+
      */
     /*success*/
     public String convert(String s, int numRows) {
