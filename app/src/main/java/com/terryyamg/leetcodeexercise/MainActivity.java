@@ -89,6 +89,9 @@ public class MainActivity extends AppCompatActivity {
                 case "007":
                     MainActivityFragment.n007(fragmentManager);
                     break;
+                case "009":
+                    MainActivityFragment.n009(fragmentManager);
+                    break;
                 case "202":
                     MainActivityFragment.n202(fragmentManager);
                     break;

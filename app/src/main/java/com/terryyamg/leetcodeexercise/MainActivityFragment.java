@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentTransaction;
 
 import com.terryyamg.leetcodeexercise.Easy.Number001TwoSum;
 import com.terryyamg.leetcodeexercise.Easy.Number007ReverseInteger;
+import com.terryyamg.leetcodeexercise.Easy.Number009PalindromeNumber;
 import com.terryyamg.leetcodeexercise.Easy.Number202HappyNumber;
 import com.terryyamg.leetcodeexercise.Medium.Number002AddTwoNumbers;
 import com.terryyamg.leetcodeexercise.Medium.Number003LongestSubstringWithoutRepeatingCharacters;
@@ -37,14 +38,6 @@ class MainActivityFragment {
         fragmentTransaction.commit();
     }
 
-    static void n202(FragmentManager fragmentManager){
-        FragmentTransaction fragmentTransaction  = fragmentManager.beginTransaction();
-        Number202HappyNumber number202HappyNumber = new Number202HappyNumber();
-        fragmentTransaction.replace(R.id.content_frame, number202HappyNumber, "202");
-        fragmentTransaction.addToBackStack("202");
-        fragmentTransaction.commit();
-    }
-
     static void n006(FragmentManager fragmentManager){
         FragmentTransaction fragmentTransaction  = fragmentManager.beginTransaction();
         Number006ZigZagConversion number006ZigZagConversion = new Number006ZigZagConversion();
@@ -61,5 +54,19 @@ class MainActivityFragment {
         fragmentTransaction.commit();
     }
 
+    static void n009(FragmentManager fragmentManager){
+        FragmentTransaction fragmentTransaction  = fragmentManager.beginTransaction();
+        Number009PalindromeNumber number009PalindromeNumber = new Number009PalindromeNumber();
+        fragmentTransaction.replace(R.id.content_frame, number009PalindromeNumber, "009");
+        fragmentTransaction.addToBackStack("009");
+        fragmentTransaction.commit();
+    }
 
+    static void n202(FragmentManager fragmentManager){
+        FragmentTransaction fragmentTransaction  = fragmentManager.beginTransaction();
+        Number202HappyNumber number202HappyNumber = new Number202HappyNumber();
+        fragmentTransaction.replace(R.id.content_frame, number202HappyNumber, "202");
+        fragmentTransaction.addToBackStack("202");
+        fragmentTransaction.commit();
+    }
 }
