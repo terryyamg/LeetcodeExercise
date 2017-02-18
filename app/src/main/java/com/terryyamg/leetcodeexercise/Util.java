@@ -5,6 +5,7 @@ import android.content.Context;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -58,6 +59,9 @@ class Util {
         @Override
         public void onBindViewHolder(QuestionViewHolder holder, int position) {
             //放入資料
+            Log.i("position",position+"");
+            Log.i("mNumber",mNumber[position]+"");
+            Log.i("mTitle",mTitle[position]+"");
             holder.tvNumber.setText(mNumber[position]);
             holder.tvTitle.setText(mTitle[position]);
         }

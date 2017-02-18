@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--easy-->
+    <string-array name="number_easy">
+        <item>001</item>
+        <item>007</item>
+        <item>009</item>
+        <item>202</item>
+    </string-array>
+    <string-array name="title_easy">
+        <item>Two Sum</item>
+        <item>Reverse Integer</item>
+        <item>Palindrome Number</item>
+        <item>Happy Number</item>
+    </string-array>
+
+    <!--medium-->
+    <string-array name="number_medium">
+        <item>002</item>
+        <item>003</item>
+        <item>006</item>
+        <item>011</item>
+    </string-array>
+    <string-array name="title_medium">
+        <item>Add Two Numbers</item>
+        <item>Longest Substring Without Repeating Characters</item>
+        <item>ZigZag Conversion</item>
+        <item>Container With Most Water</item>
+    </string-array>
+
+    <!--hard-->
+    <string-array name="number_hard">
+        <item>001</item>
+    </string-array>
+    <string-array name="title_hard">
+        <item>Hard Test</item>
+    </string-array>
+</resources>

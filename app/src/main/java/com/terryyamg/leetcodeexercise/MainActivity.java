@@ -13,13 +13,6 @@ import android.widget.LinearLayout;
 import android.widget.TabHost;
 import android.widget.TextView;
 
-import static com.terryyamg.leetcodeexercise.QuestionsNumber.NUMBER_EASY;
-import static com.terryyamg.leetcodeexercise.QuestionsNumber.NUMBER_HARD;
-import static com.terryyamg.leetcodeexercise.QuestionsNumber.NUMBER_MEDIUM;
-import static com.terryyamg.leetcodeexercise.QuestionsTitle.TITLE_EASY;
-import static com.terryyamg.leetcodeexercise.QuestionsTitle.TITLE_HARD;
-import static com.terryyamg.leetcodeexercise.QuestionsTitle.TITLE_MEDIUM;
-
 
 public class MainActivity extends AppCompatActivity {
 
@@ -52,9 +45,9 @@ public class MainActivity extends AppCompatActivity {
         mTabHost.setCurrentTab(1); //點選頁籤2
         mTabHost.setCurrentTab(0); //點選頁籤1
 
-        util.setRecyclerView(rvEasy,NUMBER_EASY,TITLE_EASY);
-        util.setRecyclerView(rvMedium,NUMBER_MEDIUM,TITLE_MEDIUM);
-        util.setRecyclerView(rvHard,NUMBER_HARD,TITLE_HARD);
+        util.setRecyclerView(rvEasy,getResources().getStringArray(R.array.number_easy),getResources().getStringArray(R.array.title_easy));
+        util.setRecyclerView(rvMedium,getResources().getStringArray(R.array.number_medium),getResources().getStringArray(R.array.title_medium));
+        util.setRecyclerView(rvHard,getResources().getStringArray(R.array.number_hard),getResources().getStringArray(R.array.title_hard));
         rvEasy.addOnItemTouchListener(new RecyclerTouchListener(getApplicationContext(), rvEasy,listenerEasy));
         rvMedium.addOnItemTouchListener(new RecyclerTouchListener(getApplicationContext(), rvMedium,listenerMedium));
         rvHard.addOnItemTouchListener(new RecyclerTouchListener(getApplicationContext(), rvHard,listenerHard));
@@ -82,17 +75,17 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View view, int position) {
-            switch (NUMBER_EASY[position]){
-                case "001":
+            switch (position){
+                case 0:
                     MainActivityFragment.n001(fragmentManager);
                     break;
-                case "007":
+                case 1:
                     MainActivityFragment.n007(fragmentManager);
                     break;
-                case "009":
+                case 2:
                     MainActivityFragment.n009(fragmentManager);
                     break;
-                case "202":
+                case 3:
                     MainActivityFragment.n202(fragmentManager);
                     break;
                 default:
@@ -111,15 +104,18 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View view, int position) {
-            switch (NUMBER_MEDIUM[position]){
-                case "002":
+            switch (position){
+                case 0:
                     MainActivityFragment.n002(fragmentManager);
                     break;
-                case "003":
+                case 1:
                     MainActivityFragment.n003(fragmentManager);
                     break;
-                case "006":
+                case 2:
                     MainActivityFragment.n006(fragmentManager);
+                    break;
+                case 3:
+                    MainActivityFragment.n011(fragmentManager);
                     break;
                 default:
                     Log.i("none","none");
@@ -137,8 +133,8 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View view, int position) {
-            switch (NUMBER_HARD[position]){
-                case "001":
+            switch (position){
+                case 0:
                     Log.i("h","001");
                     break;
                 default:
