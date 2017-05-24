@@ -5,12 +5,14 @@
         <item>001</item>
         <item>007</item>
         <item>009</item>
+        <item>014</item>
         <item>202</item>
     </string-array>
     <string-array name="title_easy">
         <item>Two Sum</item>
         <item>Reverse Integer</item>
         <item>Palindrome Number</item>
+        <item>Longest Common Prefix</item>
         <item>Happy Number</item>
     </string-array>
 

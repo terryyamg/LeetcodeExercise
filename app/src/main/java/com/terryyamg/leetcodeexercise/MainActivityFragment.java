@@ -1,12 +1,14 @@
 package com.terryyamg.leetcodeexercise;
 
 
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 
 import com.terryyamg.leetcodeexercise.Easy.Number001TwoSum;
 import com.terryyamg.leetcodeexercise.Easy.Number007ReverseInteger;
 import com.terryyamg.leetcodeexercise.Easy.Number009PalindromeNumber;
+import com.terryyamg.leetcodeexercise.Easy.Number014LongestCommonPrefix;
 import com.terryyamg.leetcodeexercise.Easy.Number202HappyNumber;
 import com.terryyamg.leetcodeexercise.Medium.Number002AddTwoNumbers;
 import com.terryyamg.leetcodeexercise.Medium.Number003LongestSubstringWithoutRepeatingCharacters;
@@ -16,67 +18,46 @@ import com.terryyamg.leetcodeexercise.Medium.Number011ContainerWithMostWater;
 class MainActivityFragment {
 
     static void n001(FragmentManager fragmentManager){
-        FragmentTransaction fragmentTransaction  = fragmentManager.beginTransaction();
-        Number001TwoSum number001TwoSum = new Number001TwoSum();
-        fragmentTransaction.replace(R.id.content_frame, number001TwoSum, "001");
-        fragmentTransaction.addToBackStack("001");
-        fragmentTransaction.commit();
+        setFragment(fragmentManager, new Number001TwoSum(), "001");
     }
 
     static void n002(FragmentManager fragmentManager){
-        FragmentTransaction fragmentTransaction  = fragmentManager.beginTransaction();
-        Number002AddTwoNumbers number002AddTwoNumbers = new Number002AddTwoNumbers();
-        fragmentTransaction.replace(R.id.content_frame, number002AddTwoNumbers, "002");
-        fragmentTransaction.addToBackStack("002");
-        fragmentTransaction.commit();
+        setFragment(fragmentManager, new Number002AddTwoNumbers(), "002");
     }
 
     static void n003(FragmentManager fragmentManager){
-        FragmentTransaction fragmentTransaction  = fragmentManager.beginTransaction();
-        Number003LongestSubstringWithoutRepeatingCharacters number003LongestSubstringWithoutRepeatingCharacters = new Number003LongestSubstringWithoutRepeatingCharacters();
-        fragmentTransaction.replace(R.id.content_frame, number003LongestSubstringWithoutRepeatingCharacters, "003");
-        fragmentTransaction.addToBackStack("003");
-        fragmentTransaction.commit();
+        setFragment(fragmentManager, new Number003LongestSubstringWithoutRepeatingCharacters(), "003");
     }
 
     static void n006(FragmentManager fragmentManager){
-        FragmentTransaction fragmentTransaction  = fragmentManager.beginTransaction();
-        Number006ZigZagConversion number006ZigZagConversion = new Number006ZigZagConversion();
-        fragmentTransaction.replace(R.id.content_frame, number006ZigZagConversion, "006");
-        fragmentTransaction.addToBackStack("006");
-        fragmentTransaction.commit();
+        setFragment(fragmentManager, new Number006ZigZagConversion(), "006");
     }
 
     static void n007(FragmentManager fragmentManager){
-        FragmentTransaction fragmentTransaction  = fragmentManager.beginTransaction();
-        Number007ReverseInteger number007ReverseInteger = new Number007ReverseInteger();
-        fragmentTransaction.replace(R.id.content_frame, number007ReverseInteger, "007");
-        fragmentTransaction.addToBackStack("007");
-        fragmentTransaction.commit();
+        setFragment(fragmentManager, new Number007ReverseInteger(), "007");
     }
 
     static void n009(FragmentManager fragmentManager){
-        FragmentTransaction fragmentTransaction  = fragmentManager.beginTransaction();
-        Number009PalindromeNumber number009PalindromeNumber = new Number009PalindromeNumber();
-        fragmentTransaction.replace(R.id.content_frame, number009PalindromeNumber, "009");
-        fragmentTransaction.addToBackStack("009");
-        fragmentTransaction.commit();
+        setFragment(fragmentManager, new Number009PalindromeNumber(), "009");
     }
 
     static void n011(FragmentManager fragmentManager){
-        FragmentTransaction fragmentTransaction  = fragmentManager.beginTransaction();
-        Number011ContainerWithMostWater number011ContainerWithMostWater = new Number011ContainerWithMostWater();
-        fragmentTransaction.replace(R.id.content_frame, number011ContainerWithMostWater, "011");
-        fragmentTransaction.addToBackStack("011");
-        fragmentTransaction.commit();
+        setFragment(fragmentManager, new Number011ContainerWithMostWater(), "011");
+    }
+
+    static void n014(FragmentManager fragmentManager){
+        setFragment(fragmentManager, new Number014LongestCommonPrefix(), "014");
     }
 
 
     static void n202(FragmentManager fragmentManager){
+        setFragment(fragmentManager, new Number202HappyNumber(), "202");
+    }
+
+    private static void setFragment(FragmentManager fragmentManager, Fragment fragment, String tag){
         FragmentTransaction fragmentTransaction  = fragmentManager.beginTransaction();
-        Number202HappyNumber number202HappyNumber = new Number202HappyNumber();
-        fragmentTransaction.replace(R.id.content_frame, number202HappyNumber, "202");
-        fragmentTransaction.addToBackStack("202");
+        fragmentTransaction.replace(R.id.content_frame, fragment, tag);
+        fragmentTransaction.addToBackStack(tag);
         fragmentTransaction.commit();
     }
 }

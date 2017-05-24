@@ -4,7 +4,7 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
-    <color name="colorEasyQuestion">#eab9f9f0</color>
+    <color name="colorEasyQuestion">#b9f9f0</color>
     <color name="colorMediumQuestion">#84c0f6</color>
     <color name="colorHardQuestion">#ffb3cd</color>
 </resources>
